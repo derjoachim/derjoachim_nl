@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS     `#__belager_belagers`,    `#__belager_groups`,    `#__belager_networks`;,DROP VIEW `#__belager_view_belagers`

@@ -1,0 +1,1192 @@
+/*
+ // Based on "Keep It Simple" Template for Joomla! 1.5.x - Version: 1.0
+ // Originally designed by styleshout (www.styleshout.com) & developed for Joomla! by TemplateWorks
+ // Copyright (c) 2008 - 2009 TemplateWorks. All rights reserved.
+ // Released under the GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ // More info at http://www.templateworks.net
+ //
+ //
+ // Edits by derjoachim 2010 - 2012
+ // *** Last update: Jan 26th, 2012 ***
+ */
+
+/* ========================================================================== */
+/* ============================= GLOBAL STYLING ============================= */
+/* ========================================================================== */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	font-family: 'Lucida Grande', Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #6f6f6f;
+	text-align: left;
+	background: #f6f5f5;
+}
+p, div, table, tr, td, form, input {
+	font-size: 12px;
+	color: #6f6f6f;
+	font-weight: normal;
+	text-decoration: none;
+}
+p, td {
+	line-height: 20px;
+	margin-bottom: 8px;
+}
+
+/* Headings */
+
+h1 {
+	font: normal 32px /36px Georgia, "Times New Roman", Times, serif;
+	color: #444;
+	margin: 4px 0 8px;
+	letter-spacing: -4px;
+}
+h2 {
+	font: normal 26px /30px Georgia, "Times New Roman", Times, serif;
+	color: #444;
+	margin: 4px 0 8px;
+	letter-spacing: -2px;
+}
+h3 {
+	font: normal 22px /24px Georgia, "Times New Roman", Times, serif;
+	color: #444;
+	margin: 12px 0;
+	letter-spacing: -1px;
+}
+h4 {
+	font: normal 16px /18px Georgia, "Times New Roman", Times, serif;
+	color: #444;
+	margin: 8px 0;
+}
+h5 {
+	font: normal 14px /16px Georgia, "Times New Roman", Times, serif;
+	color: #444;
+	margin: 8px 0;
+}
+h6 {
+	font: normal 12px /14px Georgia, "Times New Roman", Times, serif;
+	color: #444;
+	margin: 8px 0;
+}
+/* Lists */
+ul, ol {
+	margin: 10px 20px;
+	padding: 0 20px;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+
+dt {
+	font-weight: bold;
+	color: #7BA857;
+}
+dd {
+	padding-left: 35px;
+	margin: 1px 0;
+}
+dl {
+	padding: 10px 0;
+}
+dl.article-info {
+	padding: 0px;
+}
+
+dt.article-info-term {
+	padding: 0;
+	display:none;
+}
+dd.published, dd.created {
+	color: #888;
+	background: url(../images/date.gif) no-repeat left;
+	padding: 4px 0 4px 18px;
+}
+dd.createdby {
+	color: #FFA03C;
+	font-family: "Trebuchet MS",Trebuchet,Arial,Verdana,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 4px 0 4px 18px;
+}
+/* Links */
+a {
+	font-size: 12px;
+	color: #ae855c;
+	text-decoration: none;
+}
+a:link {
+}
+a:visited {
+}
+a:active, a:focus {
+	outline: 0;
+}
+a:hover {
+	font-size: 12px;
+	color: #444;
+	text-decoration: none;
+}
+/* Forms */
+select, option {
+	font-size: 12px;
+	color: #222;
+	font-weight: normal;
+	text-decoration: none;
+}
+input {
+	vertical-align: middle;
+}
+blockquote {
+	display: block;
+	padding: 20px 20px 20px 50px;
+	background: #f8f8f8 url(../images/quote.gif) no-repeat 12px 8px;
+	font: italic 17px /20px Georgia, "Times New Roman", Times, serif;
+	color: #555;
+	border: 1px solid #ebebeb;
+}
+pre {
+	color: #555;
+	border: 1px solid #ebebeb;
+	background: #f8f8f8;
+	padding: 20px;
+}
+/* Article Image */
+td.buttonheading img {
+	background: none;
+	border: 0;
+}
+/* ========================================================================== */
+/* ============================ CONTENT LAYOUT ============================== */
+/* ========================================================================== */
+
+.content-links {
+	display:none;
+}
+#top-container {
+	background: #fff url(../images/bg.gif) repeat-x top;
+}
+#top {
+	position: relative;
+	top: 0px;
+	left:50%;
+	margin-left:-480px;
+	width: 960px;
+	background: url(../images/header-image.gif) no-repeat right 0;
+	overflow: hidden;
+}
+.topArea {
+	height: 60px;
+	overflow: hidden;
+	padding-left: 25px;
+}
+#logo {
+	padding: 35px 0 0 0;
+}
+#logo h1 {
+	margin: 0;
+	padding: 0 0 0 25px;
+}
+#logo a {
+	font-size: 65px;
+	line-height: 66px;
+	font-weight: normal;
+	color: #ffa03c;
+	display: block;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	letter-spacing: -5px;
+}
+#logo a:hover {
+}
+#logo a span {
+}
+#logo a:hover span {
+}
+#logo h2 {
+	font-size: 17px;
+	line-height: 20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	color: #ffa03c;
+	font-weight: normal;
+	padding: 0 0 0 80px;
+	margin: 0 0 60px 0;
+	letter-spacing: -1px;
+}
+#menu-top {
+	float: left;
+}
+#search {
+	float: right;
+	width: 300px;
+}
+#search div.moduletable form div.search {
+	margin: 10px 0 0 16px;
+}
+#content {
+	margin: 0 auto;
+	width: 960px;
+	background: url(../images/dots.gif) repeat-x top;
+}
+#left-col {
+	/*margin-top: 10px;*/
+	width: 430px;
+	float: left;
+	text-align: left;
+	padding: 20px;
+}
+
+#mid-col ul {
+	margin: 0;
+	padding: 0;
+	list-style: square;
+}
+#mid-col ul li {
+	margin: 0;
+	padding: 0;
+}
+#mid-col ol {
+	margin: 0;
+	padding: 0 0;
+}
+#mid-col ol li {
+	margin: 0;
+	padding: 0;
+}
+#mid-col {
+/*	margin-top: 10px;*/
+	width: 200px;
+	float: left;
+	text-align: left;
+	padding: 20px;
+	border-right: 1px solid #F3F1F1;
+	border-left: 1px solid #F3F1F1;
+}
+#mid-col {
+	border-right: 1px solid #F3F1F1;
+}
+#mid-col div.moduletable h3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	line-height: 30px;
+	font-size: 22px;
+	color: #444;
+	text-transform: capitalize;
+	letter-spacing: -1px;
+	border-bottom: #ebebeb 2px solid;
+	padding-bottom: 10px;
+}
+#mid-col div.moduletable ul {
+	list-style: none;
+}
+#mid-col div.moduletable ul.menu {
+}
+#mid-col div.moduletable ul.menu li {
+	background: url(../images/dots.gif) repeat-x bottom;
+	line-height: 30px;
+}
+#mid-col div.moduletable ul.menu li a {
+	display: block;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #ffa03c;
+	padding: 0 0 0 6px;
+}
+#mid-col div.moduletable ul.menu li a:hover {
+	background: #efefef;
+	display: block;
+}
+#mid-col div.moduletable ul.menu li.active a {
+	display: block;
+	color: #444;
+}
+#mid-col div.moduletable ul.menu li.active.parent a {
+	display: block;
+	color: #444;
+}
+#mid-col div.moduletable ul.menu li.active.parent li a {
+	color: #ffa03c;
+	display: block;
+	background: url(../images/indent4.png) no-repeat left;
+	padding-left: 12px;
+}
+#mid-col div.moduletable ul.menu li.active.parent li a:hover {
+	display: block;
+	background: #efefef url(../images/indent4.png) no-repeat left;
+	padding-left: 12px;
+}
+#mid-col div.moduletable ul.menu li.active.parent li.active a {
+	color: #444;
+	display: block;
+	background: #efefef url(../images/indent4.png) no-repeat left;
+	padding-left: 12px;
+}
+#mid-col div.moduletable ul.menu li.active.parent li.active a:hover {
+	display: block;
+	background: #efefef url(../images/indent4.png) no-repeat left;
+	padding-left: 12px;
+}
+#right-col ul {
+	margin: 0;
+	padding: 0;
+	list-style: square;
+}
+#right-col ul li {
+	margin: 0;
+	padding: 0;
+}
+#right-col ol {
+	margin: 0;
+	padding: 0 0;
+}
+#right-col ol li {
+	margin: 0;
+	padding: 0;
+}
+#right-col {
+/*	margin-top: 10px;*/
+	width: 200px;
+	float: right;
+	text-align: left;
+	padding: 20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-size: 12px;
+}
+#right-col div.moduletable h3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-size: 22px;
+	color: #444;
+	text-transform: capitalize;
+	border-bottom: #ebebeb 1px solid;
+	padding-bottom: 10px;
+}
+.bannerfooter_text {
+	background: #f8f8f8;
+	text-align: right;
+}
+.bannerfooter_text a {
+	color: #a82a15;
+}
+/* FOOTER. */
+#footer {
+	border-top: 1px solid #ccc;
+	border-bottom: 2px solid #ffa03c;
+	clear: both;
+	padding: 8px;
+}
+#footer div.moduletable {
+	position: relative;
+	width:960px;
+	left: 50%;
+	margin-left: -480px;
+	margin-bottom: 0px;
+}
+#footer div.moduletable ul.menu {
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+#footer div.moduletable ul.menu li {
+	display: inline;
+	padding: 0 0 0 4px;
+}
+#footer div.moduletable ul.menu li a {
+	font-weight: normal;
+	color: #444444;
+}
+#search .search {
+	background: url(../images/header-search.gif) no-repeat top right;
+	border-top: none;
+	width: 280px;
+	height: 33px;
+}
+#search .search input.inputbox {
+	background: url(../images/search.gif) no-repeat right center;
+	text-align: left;
+	width: 248px;
+	border: 0;
+	padding: 8px 0;
+	color: #afafaf;
+	font-size: 12px;
+	text-transform: capitalize;
+}
+/* ========================================================================== */
+/* ============= COMMON ELEMENTS (titles, forms, buttons etc.) ============== */
+/* ========================================================================== */
+
+/* Global clear */
+.clr {
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+/* Layout */
+pre {
+	font-family: monospace;
+}/* used for displaying code blocks in content */
+/* Images */
+img {
+	border: none;
+}
+/* Form elements */
+#form-login fieldset.input {
+	border: none;
+}
+#form-login fieldset.input p {
+	padding-bottom: 3px;
+}
+#form-login ul {
+	padding: 0;
+	margin: 10px 0 0 0;
+}
+#form-login ul li a {
+	display: block;
+	padding: 0 1px;
+	color: #444;
+}
+#form-login ul li a:hover {
+	display: block;
+	padding: 0 1px;
+	color: #ffa03c;
+}
+.inputbox {
+	border: 1px solid #ccc;
+	padding: 1px;
+	font-size: 12px;
+}
+.inputbox:focus {
+	border: 1px solid #ccc;
+	padding: 1px;
+	background: #ffffdd;
+	font-size: 12px;
+}
+td .inputbox {
+	margin: 2px;
+}
+.button {
+	margin: 4px 0;
+	padding: 1px 4px;
+	background: #eee;
+	color: #333;
+	font-weight: bold;
+	font-size: 12px;
+	border: 1px solid #ddd;
+	cursor: pointer;
+}
+/* Section/category description pages */
+table.contentpane tr td.contentdescription {
+	background: #f5f5f5;
+	padding: 8px;
+}
+table.contentpane tr td.contentdescription img {
+	float: right;
+}
+/* Section listings */
+th.sectiontableheader, td.sectiontableheader {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	background: #eee;
+	color: #888;
+	padding: 4px;
+}/* This is for styling the section table headers */
+td.sectiontablefooter {
+}
+.sectiontableentry1 {
+}
+.sectiontableentry2 {
+}
+tr.sectiontableentry1 {
+}
+tr.sectiontableentry1 td {
+	background: #fff;
+	padding: 4px;
+}
+tr.sectiontableentry2 {
+}
+tr.sectiontableentry2 td {
+	background: #eee;
+	padding: 4px;
+}
+/* Back button */
+div.back_button {
+	border-top: 1px solid #ccc;
+	margin: 12px 0px;
+	padding: 8px;
+	text-align: center;
+}
+div.back_button a {
+	font-family: "Trebuchet MS", Trebuchet, Arial, Verdana, sans-serif;
+	font-weight: normal;
+	background: #222;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 2px 16px;
+}
+div.back_button a:hover {
+	font-family: "Trebuchet MS", Trebuchet, Arial, Verdana, sans-serif;
+	font-weight: normal;
+	background: #c00;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 2px 16px;
+}
+/* Pathway */
+div#pathway {
+	margin-bottom: 12px;
+}
+span.pathway {
+	padding: 0 4px;
+}
+span.pathway img {
+}/* the arrow */
+a.pathway {
+	padding: 0 2px;
+}
+a.pathway:hover {
+	padding: 0 2px;
+}
+/* Page navigation buttons - e.g. "<< Start < Previous 1 Next > End >>" */
+span.pagination {
+	display: block;
+	padding: 8px;
+}
+span.pagination span {
+	font-weight: bold;
+	color: #777;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 2px 4px;
+	border: 1px solid #ddd;
+	background: #fff;
+	margin: 0 2px;
+}/* page nav item (disabled) */
+span.pagination a {
+	font-weight: bold;
+	color: #222;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 2px 4px;
+	border: 1px solid #ddd;
+	background: #eee;
+	margin: 0 2px;
+}/* page nav link */
+span.pagination a:hover {
+	font-weight: bold;
+	color: #222;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 2px 4px;
+	border: 1px solid #afafaf;
+	background: #bfbfbf;
+	margin: 0 2px;
+}
+span.pagination span.paginationDummy {
+	border: none;
+}
+/* Content item navigation buttons */
+th.pagenav_next {
+}/* next button */
+th.pagenav_next a {
+}
+th.pagenav_prev {
+}/* previous button */
+th.pagenav_prev a {
+}
+/* Toolbar */
+table#toolbar {
+	margin-right: 10px;
+}
+table#toolbar a.toolbar {
+	color: #808080;
+	text-decoration: none;
+	display: block;
+	border: 1px solid #DDD;
+	width: 40px;
+	padding: 2px 5px 2px 5px;
+}
+table#toolbar a.toolbar:hover {
+	color: #C64934;
+	cursor: pointer;
+	border: 1px solid #c24733;
+	background-color: #f1e8e6;
+	padding: 3px 5px 1px 5px;
+}
+table#toolbar a.toolbar:active {
+	color: #f60;
+}
+table#toolbar a.toolbar img {
+}
+/* offlinebar.php */
+table.moswarning {
+	background-color: #c00;
+	border-bottom: 2px solid #555;
+}
+table.moswarning tr td {
+	padding: 4px;
+}
+table.moswarning tr td h2 {
+	text-align: center;
+	color: #fff;
+	font-family: "Trebuchet MS", Trebuchet, Arial, Verdana, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+table.moswarning tr td h2 span {
+	font-weight: normal;
+	font-size: 14px;
+}
+table.moswarning tr td h2 span br {
+	display: none;
+}
+/* ========================================================================== */
+/* =============================== COMPONENTS =============================== */
+/* ========================================================================== */
+/* com_banner */
+
+#emailForm label {
+	display: block;
+	font-weight: bold;
+	margin-top: 4px;
+}
+#emailForm br {/*display:none;*/
+}
+#emailForm input {
+}
+#emailForm textarea {
+	display: block;
+}
+#emailForm input.button {
+	padding: 2px 20px;
+}
+#emailForm input.inputbox {
+}
+div.contact_email {
+}
+input#contact_name {
+}
+input#contact_email {
+}
+input#contact_subject {
+}
+input#contact_email_copy {
+}
+textarea#contact_text {
+}
+textarea.inputbox {
+}
+/* END com_contact ------------------ */
+
+/* ---------------------- com_content & com_frontpage ----------------------
+
+ /* blog list */
+.componentheading {
+	font-size: 20px;
+	margin-bottom: 12px;
+}
+table#toolbar {
+}
+/* blog more - article lists (the "more..." list) */
+div.items-more {
+	margin: 12px 0 24px 0;
+	padding: 4px;
+}
+div.items-more div strong {
+	color: #ffa03c;
+	font-size: 20px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin: 0 0 8px 0;
+	font-weight: normal;
+	padding: 2px 6px;
+}/* title */
+div.items-more ul {
+	margin: 2px 12px;
+	padding: 0 8px;
+	list-style: square;
+}/* article list */
+div.items-more ul li {
+	margin: 1px 4px;
+	padding: 0;
+}/* article list item */
+/* content item styling */
+td.actions {
+	padding: 0 1px;
+}/* email/print/pdf buttons */
+td.actions a, td.actions a:hover {
+	background: none;
+}
+table.contentpane {
+}
+span.small {
+	color: #333;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "Trebuchet MS", Trebuchet, Arial, Verdana, sans-serif;
+}/* author */
+.item-separator {
+	display: block;
+	height: 15px;
+}
+/* ---------------------- END com_content & com_frontpage ---------------------- */
+
+.frontpage table.pollstableborder {
+	width: auto;
+	padding: 0;
+	border: none;
+}
+table.searchintro {
+	width: 100%;
+	margin: 8px 0;
+	background: #f5f5f5;
+}
+table.searchintro tr td {
+	font-weight: bold;
+	padding: 4px;
+}
+select.inputbox {
+}
+span.highlight {
+	color: #c00;
+	border-bottom: 1px dotted #c00;
+}
+
+input#search_searchword {
+}
+select#search_ordering {
+}
+input#searchphraseexact {
+}
+input#searchphraseany {
+}
+input#searchphraseall {
+}
+fieldset {
+	border: 0;
+}
+fieldset div a:hover {
+}
+fieldset div span.small {
+	font-weight: bold;
+}
+fieldset div.small {
+	color: #999;
+	font-style: italic;
+}
+/* ========================================================================== */
+/* ================================= MODULES ================================ */
+/* ========================================================================== */
+
+/* mod_archive.php - uses ul/li structure to display months */
+
+/* mod_banners.php - outputs a or object tags */
+
+/* mod_latestnews.php - [module class suffix] on all elements */
+
+.bannerfooter_text {
+	background: #efefef;
+	text-align: right;
+	line-height: 20px;
+}
+.bannerfooter_text a {
+	color: #ae855c;
+}
+.bannerfooter_text a:hover {
+	color: #444;
+}
+ul.latestnews {
+	padding: 0;
+	margin: 0;
+}
+li.latestnews {
+}
+a.latestnews {
+}
+a.latestnews:hover {
+}
+/* Cleaner version of the above would be:*/
+ul.latestnews {
+	list-style: none;
+}
+ul.latestnews li {
+	border-bottom: 1px solid #dfdfdf;
+	line-height: 26px;
+}
+ul.latestnews li a {
+	color: #777;
+}
+ul.latestnews li a:hover {
+	color: #333;
+}
+input.button {
+}
+input.inputbox {
+}
+input#mod_login_username {
+}
+input#mod_login_password {
+}
+input#mod_login_remember {
+}
+/* ------------------ mod_mainmenu.php ------------------ */
+ul#mainlevel li {
+	background: url(../images/dots.gif) repeat-x bottom;
+	line-height: 33px;
+}
+ul#mainlevel li a {
+	display: block;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #ffa03c;
+	padding: 0 0 0 6px;
+}
+ul#mainlevel li a:hover {
+	background: #efefef;
+	display: block;
+}
+ul#mainlevel li a#active_menu {
+	display: block;
+	color: #444;
+}
+ul#mainlevel-nav {
+	list-style: none;
+	padding: 0px;
+	margin: 0;
+	text-transform: uppercase;
+	font-family: 'Trebuchet MS', 'Helvetica Neue', Arial, Sans-Serif;
+}/* flat list mode */
+ul#mainlevel-nav li {
+	display: inline;
+	padding: 0px 4px;
+	margin: 0;
+}
+ul#mainlevel-nav li a {
+	color: #5f5f5f;
+	line-height: 60px;
+	background: none;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 10px 16px 0 0;
+}
+ul#mainlevel-nav li a:hover {
+	background: none;
+	line-height: 60px;
+	padding: 10px 16px 0 0;
+	color: #111;
+}
+ul#mainlevel-nav li a#active_menu-nav {
+	background: none;
+	color: #ffa03c;
+	line-height: 60px;
+	padding: 10px 16px 0 0;
+}
+/* ------------------ END mod_mainmenu.php ------------------ */
+
+/* mod_mostread.php - [module class suffix] on all elements */
+ul.mostread {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li.mostread {
+	border-bottom: 1px solid #dfdfdf;
+	line-height: 26px;
+}
+a.mostread {
+	color: #777;
+}
+a.mostread:hover {
+	color: #333;
+}
+
+/* mod_newsflash.php - [module class suffix] on table.moduletable */
+table.moduletable {
+}
+table.moduletable tr td {
+}
+table.poll {
+}
+table.poll tr td {
+	padding: 2px 2px;
+	text-align: left;
+}
+table.pollstableborder {
+}/* full path: table.poll tr td table.pollstableborder {} */
+table.pollstableborder td.sectiontableentry1 {
+}
+table.pollstableborder td.sectiontableentry2 {
+}
+input#voteid1 {
+}/* input#voteid[n] - where n=1,2,3,... */
+input#voteid2 {
+}
+input#voteid3 {
+}
+input#voteid4 {
+}
+table.poll tr td div input.button {
+}/* vote buttons */
+/* mod_random_image.php - div a img {} */
+
+/* mod_related_items.php - ul li a {} */
+
+/* mod_rssfeed.php - [module class suffix] on div.syndicate AND div.syndicate_text */
+div.syndicate {
+}
+div.syndicate div.syndicate_text {
+}
+div.syndicate div a {
+}
+div.syndicate div a img {
+}
+/* mod_search.php
+ div.search[module class suffix]
+ input.inputbox[module class suffix]
+ input.button[module class suffix]
+ */
+div.search {
+	text-align: center;
+	margin: 4px auto;
+}
+/* ========================================================================== */
+/* ================ PLUGINS (formerly known as MAMBOTS or BOTS) ============= */
+/* ========================================================================== */
+
+/* mosimage.php */
+div.mosimage {
+}
+div.mosimage_caption {
+}
+
+/* the article index table */
+table.contenttoc {
+	display: block;
+	float: right;
+	margin: 4px 0 4px 4px;
+	border: 1px solid #ccc;
+	width: 200px;
+}
+/* article index heading */
+table.contenttoc tr th {
+	background: #eee;
+	padding: 1px 2px;
+	text-align: center;
+	width: 196px;
+}
+table.contenttoc tr td {
+	padding: 2px 2px 2px 20px;
+	background: url(../images/paging.png) no-repeat left;
+	border-top: 1px solid #ddd;
+}
+table.contenttoc tr td a.toclink {
+}
+table.contenttoc tr td a.toclink:hover {
+}
+div.pagenavbar {
+	clear: both;
+	text-align: center;
+	margin: 32px 0 4px 0;
+}
+div.pagenavbar div {
+	color: #999;
+	font-weight: bold;
+}
+div.pagenavbar div a {
+	color: #222;
+	padding: 4px;
+	line-height: 20px;
+	border: 1px solid #ccc;
+	background: #eee;
+}
+div.pagenavbar div a:hover {
+	color: #222;
+	padding: 4px;
+	line-height: 20px;
+	border: 1px solid #afafaf;
+	background: #bfbfbf;
+}
+/* mosvote.php */
+span.content_rating {
+	display: block;
+	margin: 4px 0 0 0;
+	padding: 0 12px;
+	line-height: 16px;
+	font-weight: normal;
+	font-size: 12px;
+	color: #555;
+}
+span.content_rating img {
+	padding: 0 1px;
+	vertical-align: text-bottom;
+}
+span.content_vote {
+	display: block;
+	margin: -12px 0 12px 0;
+	padding: 4px 12px;
+	line-height: 16px;
+	font-weight: normal;
+	font-size: 12px;
+	color: #555;
+	border-bottom: 1px dotted #ddd;
+}
+span.content_vote input {
+	margin: 0 2px;
+	vertical-align: text-top;
+}
+span.content_vote input.button {
+	margin: 0 0 0 8px;
+	padding: 0 8px;
+	background: #eee;
+	color: #333;
+	font-weight: bold;
+	font-size: 12px;
+	border: 1px solid #ddd;
+	cursor: pointer;
+}
+/* Tooltips */
+div.tool-tip {
+	float: left;
+	background: #000;
+	border: 1px solid #D4D5AA;
+	padding: 5px;
+	max-width: 200px;
+	z-index: 13000;
+}
+div.tool-title {
+	font-size: 95%;
+	font-weight: bold;
+	background: #000;
+	color: #fff;
+}
+div.tool-text {
+	font-size: 90%;
+	color: #fff;
+}
+/* edit */
+body.edit fieldset {
+	background: #F6F5F5;
+	display: block;
+	padding: 5px 20px;
+	margin: 0 0 10px 0;
+	border: 0;
+}
+body.edit fieldset legend {
+	display: block;
+	padding: 8px 12px;
+	margin: 0;
+	background: #F6F5F5;
+	font-size: 20px;
+}
+/* OpenID icon style */
+input.system-openid, input.com-system-openid {
+	background: url(http://openid.net/login-bg.gif) no-repeat;
+	background-color: #fff;
+	background-position: 0 50%;
+	color: #000;
+	padding-left: 18px;
+}
+/* Unpublished */
+.system-unpublished {
+	background: #e8edf1;
+	border-top: 4px solid #c4d3df;
+	border-bottom: 4px solid #c4d3df;
+}
+/* System Messages */
+#system-message {
+	border: 1px solid #fff;
+	background: #F6F5F5;
+}
+#system-message dt {
+	display: none;
+}
+#system-message dd {
+	margin: 0;
+	font-weight: bold;
+	padding: 10px;
+}
+#system-message dd ul {
+	color: #444;
+	margin: 0px;
+	list-style: none;
+	padding: 0px;
+}
+/* Debug */
+#system-debug {
+	color: #ccc;
+	background-color: #fff;
+	padding: 10px;
+	margin: 10px;
+}
+#system-debug div {
+	font-size: 11px;
+}
+/* ========================================================================== */
+/* ======================= GENERIC MODULE FORMATTING ======================== */
+/* ========================================================================== */
+
+div.moduletable {
+	margin: 0 0 20px 0;
+}
+div.moduletable h3 {
+	color: #c00;
+	font-size: 16px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 0 0 4px 0;
+}
+/* ========================================================================== */
+/* ==================== PRINT/E-MAIL PAGE - index2.php ====================== */
+/* ========================================================================== */
+/*
+body.contentpane {
+	padding: 16px;
+	background: #fff;
+	color: #333;
+}
+body.contentpane span.article_seperator {
+	display: block;
+	clear: both;
+	margin: 8px 0 0 0;
+	border-bottom: 1px solid #222;
+	height: 2px;
+	line-height: 0;
+}
+body.contentpane div span.small {
+	background: #eee;
+	line-height: 24px;
+	padding: 2px 8px;
+	border: 1px solid #ccc;
+}
+body.contentpane * {
+	color: #333 !important;
+}
+body.contentpane form table {
+	border: 1px solid #ccc;
+	padding: 8px;
+	margin: 0;
+}
+body.contentpane form table tr td {
+	padding: 1px 2px;
+	margin: 0;
+	font-weight: bold;
+}
+body.contentpane form table tr td .inputbox {
+	width: 90%;
+	font-weight: normal;
+}
+body.contentpane form table tr td .button {
+	padding: 1px 8px;
+	font-weight: bold;
+}*/
+/* ========================================================================== */
+/* =========================== END of stylesheet ============================ */
+/* ========================================================================== */

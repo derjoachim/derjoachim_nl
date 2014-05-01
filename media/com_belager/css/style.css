@@ -1,0 +1,6 @@
+#belager_list li 
+{
+	list-style-type: none;
+	display: inline;
+	padding-right: 2px;
+}

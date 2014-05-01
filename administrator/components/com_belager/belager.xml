@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>Belager</name>
+	<author>der Joachim</author>
+	<creationDate>August 2011</creationDate>
+	<copyright>Copyright (C) 2011 Joachim van de Haterd. (http://www.derjoachim.nl/</copyright>
+	<license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>joachim@derjoachim.nl</authorEmail>
+	<authorUrl>www.derjoachim.nl</authorUrl>
+	<version>1.0.0</version>
+	<description>A simple component, written in Nooku Framework, to administer links to social media. It is a refactor of com_stalker.</description>
+	<!-- Application/site -->
+	<files folder="site/modules/mod_belager">
+		<file>mod_belager.php</file>
+		<file>mod_belager.xml</file>
+		<file>view.php</file>
+		<folder>tmpl</folder>
+	</files>
+	<!--  Media -->
+	<media destination="com_belager">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</media>
+	<!-- Application/administrator -->
+	<administration>
+		<menu>Belager</menu>
+		<submenu>
+			<menu view="belagers">Your social networks</menu>
+			<menu view="groups">Your groups</menu>
+			<menu view="networks">All networks</menu>
+		</submenu>
+		<files folder="administrator/components/com_belager">
+			<folder>controllers</folder>
+			<folder>templates</folder>
+			<folder>install</folder>
+			<folder>models</folder>
+			<folder>databases</folder>
+			<folder>language</folder>
+			<folder>views</folder>
+			<file>belager.php</file>
+			<file>dispatcher.php</file>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_belager.ini</language>
+			<language tag="nl-NL">language/nl-NL.com_belager.ini</language>
+		</languages>
+	</administration>
+	<!-- Installation
+	<installfile>install/install.belager.php</installfile>
+	<uninstallfile>install/uninstall.belager.php</uninstallfile>-->
+	<install folder="admin">
+		<sql>
+			<file charset="utf8" driver="mysql">install/install.mysql.utf.sql</file>
+			<file driver="mysql">install/install.mysql.sql</file>
+		</sql>
+		<administration>
+			<menu>Belager</menu>
+			<submenu>
+				<menu view="belagers">Your social networks</menu>
+				<menu view="groups">Your groups</menu>
+				<menu view="networks">All networks</menu>
+			</submenu>
+		</administration>
+	</install>
+	<uninstall folder="admin">
+		<sql>
+			<file charset="utf8" driver="mysql">install/uninstall.mysql.utf.sql</file>
+			<file driver="mysql">install/uninstall.mysql.sql</file>
+		</sql>
+	</uninstall>
+	<!-- Modules
+	<modules>
+	<module module="mod_belager"/>
+	</modules>-->
+</extension>
