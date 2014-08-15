@@ -25,7 +25,8 @@
         <position>top</position>
         <position>language</position>
         <position>header</position>
-        <position>footer</position>
+        <position>footer-l</position>
+        <position>footer-r</position>
     </positions>
     <config>
         <fields name="params">

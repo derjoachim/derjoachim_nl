@@ -2,7 +2,6 @@
 defined('_JEXEC') or die;
 
 $doc = JFactory::getDocument();
-//$doc->addScript('/templates/' . $this->template . '/js/main.js', 'text/javascript');
 $doc->addStylesheet($this->baseurl.'/templates/' . $this->template . '/css/bootstrap.min.css');
 $doc->addScript($this->baseurl.'/templates/' . $this->template . '/js/bootstrap.min.js', 'text/javascript');
 
@@ -69,12 +68,22 @@ $sitename = $this->params->get('sitename');
                     <jdoc:include type="modules" name="right" style="well"/>
                 </div>
             </div>
-            <!-- footer -->
-            <div class='row' id="footer">
-                <div class='col-sm-12'>
-                    <jdoc:include type="modules" name="footer" style="xhtml"/>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class='row' id="footer">
+                    <div class='col-sm-6'>
+                        <jdoc:include type="modules" name="footer-l" style="xhtml"/>
+                    </div>
+                    <div class='col-sm-6'>
+                        <jdoc:include type="modules" name="footer-r" style="xhtml"/>
+                    </div>
+
                 </div>
             </div>
+        </footer>
         </div>
     </body>
 </html>

@@ -18,25 +18,11 @@
     -webkit-font-smoothing: antialiased;
 }
 
-.pacman:after {
-    content: "\e600";
-    color: @brand-primary;
-    font-size: 26px;
-    left: 116px; // red-anchor width - some pixels for closure
-    position: absolute;
-    top: 49px; // red-anchor margin-top - height
-
-    @media(max-width: @screen-sm-max) {
-        display: none;
-    }
-}
-
 span.linkedin {
-
     &:after {
-        content: "\e603";
+        content: "\e611";
         font-size: 30px;
-        color: @brand-primary;
+        color: @link-color;
     }
 
     &:hover:after {
@@ -47,9 +33,9 @@ span.linkedin {
 span.twitter {
 
     &:after {
-        content: "\e601";
+        content: "\e603";
         font-size: 30px;
-        color: @brand-primary;
+        color: @link-color;
     }
 
     &:hover:after {
@@ -60,12 +46,37 @@ span.twitter {
 span.github {
 
     &:after {
-        content: "\e602";
+        content: "\e60d";
         font-size: 30px;
-        color: @brand-primary;
+        color: @link-color;
     }
 
     &:hover:after {
-        color: @text-color;
+        color: @github;
+    }
+}
+
+span.stumbleupon {
+
+    &:after {
+        content: "\e613";
+        font-size: 30px;
+        color: @link-color;
+    }
+
+    &:hover:after {
+        color: @stumbleupon;
+    }
+}
+
+span.lastfm {
+    &:after {
+        content: "\e612";
+        font-size: 30px;
+        color: @link-color;
+    }
+
+    &:hover:after {
+        color: @lastfm;
     }
 }
