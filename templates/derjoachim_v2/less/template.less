@@ -1,0 +1,142 @@
+@linkedin: #0976b4;
+@twitter: #55acee;
+
+@brand-primary: #FFA03C;
+@headings-color: #444;
+
+@link-color: #ae855c;
+
+
+body {
+    color: #333333;
+    font-family: @font-family-sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 24px;
+    overflow-x: hidden;
+
+    background: #fff url(../images/bg.gif) repeat-x top;
+}
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: @headings-font-family;
+    font-weight: @headings-font-weight;
+    line-height: @headings-line-height;
+    color: @headings-color;
+    letter-spacing: -1px;
+
+    small,
+    .small {
+        font-weight: normal;
+        line-height: 1;
+        color: @headings-small-color;
+    }
+}
+
+body {
+    @media (max-width: @screen-sm-max) {
+        margin-top: 53px;
+    }
+}
+.text-orange {
+    color: @brand-primary;
+}
+
+#top {
+    top: 0px;
+    width: 100%;
+    @media (min-width: @screen-xs-max) {
+        background: url(../images/header-image.jpg) no-repeat right 0;
+        min-height: 213px;
+    }
+    overflow: hidden;
+    border-bottom: 1px solid @gray-lighter;
+}
+
+#logo {
+    padding: 35px 0 0 0;
+
+    &>h1 {
+        font-size: 65px;
+        line-height: 66px;
+        font-weight: normal;
+        display: block;
+        letter-spacing: -5px;
+        &> a {
+            color: @brand-primary;
+        }
+    }
+    &>h2 {
+        font-size: 17px;
+        line-height: 20px;
+        font-style: italic;
+        color: @brand-primary;
+        font-weight: normal;
+        padding: 0 0 0 80px;
+        margin: 0 0 60px 0;
+        letter-spacing: -1px;
+    }
+}
+
+//
+// Blog view
+//
+
+dt.article-info-term {
+    display: none;
+    padding: 0;
+}
+dd.createdby {
+    color: @brand-primary;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4px 0 4px 18px;
+}
+dd.published {
+    color: @gray-light;
+    font-size: 14px;
+    padding: 4px 0 4px 18px;
+}
+
+//
+// Navbars
+//
+.navbar-default {
+    padding-top: 4px;
+    border: none;
+    background: none;
+}
+
+#footer > .navbar > a {
+    padding: 5px;
+}
+
+//
+// Language switcher
+//
+.mod-languages {
+    ul.lang-inline {
+        text-align: right;
+        margin-top: 18px;
+        &:first-child{
+            margin-right: 18px;
+        }
+
+        > li {
+            margin: 12px 4px;
+            font-weight: 200;
+            > a {
+                color: @gray-light;
+            }
+            &.lang-active > a{
+                color: @brand-primary;
+                font-weight: 600;
+            }
+        }
+
+    }
+}

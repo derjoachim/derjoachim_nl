@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site">
+    <name>derjoachim V2</name>
+    <version>2.0</version>
+    <creationDate>2014/07/21</creationDate>
+    <author>Joachim van de Haterd</author>
+    <authorEmail>joachim@derjoachim.nl</authorEmail>
+    <copyright>Copyright (C) 2012 InMotion Hosting</copyright>
+    <description>Joomla template for www.derjoachim.nl</description>
+    <files>
+        <filename>index.php</filename>
+        <folder>css</folder>
+        <folder>less</folder>
+        <folder>js</folder>
+        <folder>images</folder>
+    </files>
+    <positions>
+        <position>breadcrumb</position>
+        <position>position-0</position>
+        <position>position-1</position>
+        <position>position-2</position>
+        <position>position-3</position>
+        <position>right</position>
+        <position>top</position>
+        <position>language</position>
+        <position>header</position>
+        <position>footer</position>
+    </positions>
+    <config>
+        <fields name="params">
+            <fieldset name="advanced">
+                <field name="sitename" type="text" size="50" default="Der Joachim" label="Site title" description="This is the title of the blog" />
+                <field name="tagline" type="text" size="50" default="Geek, runner, motorcyclist, father, knows all..." label="Tagline text" description="Tagline text" />
+                <field name="youarehere" type="text" size="50" default="You are here: " label="Pathway help text" description="Pathway help text" />
+                <field name="return_to_frontpage" type="text" size="50" default="return to the frontpage" label="'Return to the frontpage' text" description="'Return to the frontpage' text" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

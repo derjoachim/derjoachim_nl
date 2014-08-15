@@ -20,6 +20,11 @@
 
 # TEMPLATE #
 !/templates/
+!/templates/derjoachim_v2/
+!/templates/derjoachim_v2/*
+!/templates/derjoachim_v2/*/*
+!/templates/derjoachim_v2/*/*/*
+!/templates/derjoachim_v2/*/*/*/*
 !/templates/tw_keepitsimple_joav2/
 !/templates/tw_keepitsimple_joav2/*
 !/templates/tw_keepitsimple_joav2/*/*
